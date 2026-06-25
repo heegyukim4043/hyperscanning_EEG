@@ -38,7 +38,7 @@ Expected core variables in each `.mat` file:
 | `data` | `time x 57` | 19 EEG channels x 3 participants |
 | `srate` | scalar | sampling rate, expected `300 Hz` |
 | `decision_results_session` | `3 x 10` | pair-wise cooperation labels for 10 trials |
-| `event_marker` | `1 x 80` | trial event marker sequence |
+| `event_marker` | `1 x 80` | trial event code sequence; not a timestamp by itself |
 | `chanlocs` | `19 x 1` | EEG channel locations/names |
 
 ## Label Definition
@@ -58,6 +58,8 @@ Columns:
 | 3 | pair23 | participant 2 and participant 3 cooperation |
 
 The default positive event window is `0-6 s` from the trial decision marker. Non-event periods are labeled `0`.
+
+Important timing note: `event_marker` stores marker codes/order only. Exact sample-level label timing requires a paired event latency/sample variable such as `event_sample`, `event_latency`, `marker_sample`, or `marker_latency`. If those variables are absent, any timing inferred from marker order alone is approximate and should not be treated as validated event timing for analysis.
 
 ## Preprocessing
 
