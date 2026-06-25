@@ -1,0 +1,13 @@
+numpy
+scipy
+h5py
+pandas
+matplotlib
+scikit-learn
+tqdm
+tensorboard
+more-itertools
+mne
+mne-icalabel
+torch
+dgl

@@ -21,6 +21,7 @@ data_dl/
 |-- inspect_data_dl_raw.py
 |-- build_processed_from_raw.py
 |-- smoke_test_processed_inputs.py
+|-- requirements.txt
 `-- requirements_data_dl_pipeline.txt
 ```
 
@@ -85,10 +86,10 @@ ICA/ICLabel is optional because it requires extra dependencies and is computatio
 ## Install Dependencies
 
 ```powershell
-pip install -r data_dl\requirements_data_dl_pipeline.txt
+pip install -r data_dl\requirements.txt
 ```
 
-For deep-learning training, install the original project requirements and compatible PyTorch/DGL versions separately.
+If you need a CUDA-specific PyTorch/DGL build, install the matching `torch` and `dgl` wheels for your CUDA version first, then install the remaining packages from `requirements.txt`.
 
 ## Step 1: Inspect Raw Files
 
