@@ -68,7 +68,6 @@ event_marker(i) occurs at event_latency_samples(i) samples
 event_marker(i) occurs at event_timestamp(i) seconds
 ```
 
-`G01` markers were reconstructed, while `G02`-`G11` markers and timestamps were read from the original GDF event information.
 
 ## Preprocessing
 
