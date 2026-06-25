@@ -101,6 +101,8 @@ def _as_marker_vector(marker: np.ndarray) -> np.ndarray:
 
 def _find_event_sample_dataset(h5: h5py.File) -> np.ndarray | None:
     candidates = [
+        "event_latency_samples",
+        "event_sample_indices",
         "event_sample",
         "event_samples",
         "event_latency",
