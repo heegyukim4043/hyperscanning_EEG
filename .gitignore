@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+
+# Generated processed datasets
+processed_pkl/
+processed_pkl_ica/
+processed*/
+
+# Training outputs
+runs*/
+models/
+logs/
+*.pt
+*.pth
+*.ckpt
+
+# Local notebooks / temp files
+.ipynb_checkpoints/
+*.tmp
+*.bak
+
